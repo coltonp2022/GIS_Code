@@ -125,6 +125,7 @@ writeRaster(sa_tpi, filename = "sa_tpi_NAD83_13N.tif",
 rm(sa_HLI, sa_slope_t, sa_vrm, sa_asp_t, sa_hill_t, sa_trasp_t)
 
 # Create upslope area function
+                # This function was lifted from stack exchange and is not my own work.
 upslope <- function (dem, log = TRUE, atb = FALSE, deg = 0.12, fill.sinks = TRUE) 
 {
   if (!all.equal(xres(dem), yres(dem))) {
